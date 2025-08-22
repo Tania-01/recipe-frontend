@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useRecipes } from "@/context/RecipeContext";
 import RecipeCard from "../components/RecipeCard";
 import { getRecipes } from "@/services/api";
-import Navbar from "../components/Navbar";
+
 
 export default function Home() {
 

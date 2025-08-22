@@ -3,11 +3,10 @@ import { useEffect } from "react";
 import { useRecipes } from "@/context/RecipeContext";
 import RecipeCard from "../components/RecipeCard";
 import api from "../services/api";
-import Navbar from "../components/Navbar";
 import {useAuth} from "@/context/AuthContext";
 
 export default function MyRecipes() {
-    const { token } = useAuth(); // якщо авторизація через AuthContext
+    const { token } = useAuth();
     const { recipes, setRecipes, searchTerm = "" } = useRecipes();
 
     const fetchRecipes = async () => {

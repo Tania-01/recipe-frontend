@@ -40,13 +40,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         setToken(data.access_token);
         localStorage.setItem("token", data.access_token);
 
-        // Якщо потрібно, можна отримати user окремим запитом до /me
-        // Або просто зберігати email як мінімум
-        const loggedUser = { id: 0, email }; // тимчасово
+
+        const loggedUser = { id: 0, email };
         setUser(loggedUser);
         localStorage.setItem("user", JSON.stringify(loggedUser));
 
-        console.log("JWT token:", data.access_token); // ✅ токен в консолі
+        console.log("JWT token:", data.access_token);
     };
 
     const logout = () => {
