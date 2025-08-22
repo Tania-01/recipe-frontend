@@ -18,7 +18,7 @@ export default function RecipeForm({ onCreated }: { onCreated?: () => void }) {
         setAuthToken(token);
 
         try {
-            await api.post("/recipes", {
+            await api.post("http://localhost:3000/recipes", {
                 title,
                 description,
                 ingredients,
